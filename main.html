@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="D:\Font Awesome\fontawesome-free-5.15.4-web\fontawesome-free-5.15.4-web\css\all.css">
+    <title>Document</title>
+</head>
+<body onload="document.body.style.opacity='1' ">
+    
+    <div class="container">
+        <div class="sbar" id="sbar">
+            <!-- <li class="head"><b><img src="Images\logo.png" class="logo"><p></p></b></li> -->
+            <li>
+                <div class="head">
+                    <img src="images/bulb1.png" class="logo"><div class="logoname"><span style="color: rgb(25,214,229);"><b>Online</span><span style="color: rgba(33, 38, 115, 0.788);"><b>Exams</span></b></div>
+                </div>
+            </li>
+            <li><a href="card.html" target="window" class="btn  active"><img src="/images/dash.png" alt="" style="height: 30px; width: 30px; margin-bottom: -4px;"><p>Dashboard</p></a></li>
+            <!-- <li><a href="details.php" target="window" class="btn  "><img src="" alt=""><p> Details</p></a></li> -->
+            <li><a href="reports.php" target="window" class="btn  "><img src="/images/result.png" alt="" style="height: 30px; width: 30px; margin-bottom: -5px;"><p>Reports</p></a></li>
+            <li><a href="aboutus.html" target="window" class="btn  "><img src="/images/team.png" alt=""style="height: 30px; width: 30px; margin-bottom:-4px;" ><p>About Us</p></a></li>
+        
+        </div>
+        <iframe src="card.html" name="window" class="frame" ></iframe>
+    </div>
+</body>
+
+<script>
+    var btncontainer = document.getElementById("sbar");
+    var btns = btncontainer.getElementsByClassName("btn");
+
+    for (var i=0; i<btns.length; i++){
+        btns[i].addEventListener("click", function(){
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active");
+            this.className += " active";
+        })
+    }
+</script>
+</html>
+

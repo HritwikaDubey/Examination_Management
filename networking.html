@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.modal {
+  display: block; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  border-radius: 10px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.form{
+  display: none;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.info-title{
+    height: 60px;
+    width: 90%;
+    border-bottom: 1px solid lightgrey;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    border-radius: 5px 5px 0 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+.info-list{
+    padding: 15px 30px;
+}
+.info-list .info{
+    margin: 5px 0;
+    font-size: 17px;
+}
+.info-list .info span{
+    font-weight: 600;
+    color: rgb(25,214,229);
+}
+</style>
+</head>
+<body>
+
+  <!-- form test -->
+  <div id="myForm" class="form">
+    <div class="form-content">
+      <h1>RDBMS</h1>
+  
+      <!-- <form action="/action_page.php"> -->
+        <p>The "Father" of MySQL:</p>
+        <input type="radio" id="html" name="fav_language" value="HTML">
+        <label for="html">Bill Gates</label><br>
+        <input type="radio" id="css" name="fav_language" value="CSS">
+        <label for="css">Michael Widenius</label><br>
+        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+        <label for="javascript">Elon Musk</label>
+      
+        <br>  
+      
+        <p>If you want to undo a GRANT, You should use?</p>
+        <input type="radio" id="age1" name="age" value="30">
+        <label for="age1">REVOKE</label><br>
+        <input type="radio" id="age2" name="age" value="60">
+        <label for="age2">UNDO</label><br>  
+        <input type="radio" id="age3" name="age" value="100">
+        <label for="age3">UNGRANT</label><br><br>
+  
+      <p>Which of following is not available in MySQL</p>
+        <input type="radio" id="age1" name="age" value="30">
+        <label for="age1">REVOKE</label><br>
+        <input type="radio" id="age2" name="age" value="60">
+        <label for="age2">FETCH</label><br>  
+        <input type="radio" id="age3" name="age" value="100">
+        <label for="age3">JOIN</label><br><br>
+  
+      <p>Which of following is not available in MySQL</p>
+        <input type="radio" id="age1" name="age" value="30">
+        <label for="age1">REVOKE</label><br>
+        <input type="radio" id="age2" name="age" value="60">
+        <label for="age2">FETCH</label><br>  
+        <input type="radio" id="age3" name="age" value="100">
+        <label for="age3">JOIN</label><br><br>
+  
+      <p>Which of following is not available in MySQL</p>
+        <input type="radio" id="age1" name="age" value="30">
+        <label for="age1">REVOKE</label><br>
+        <input type="radio" id="age2" name="age" value="60">
+        <label for="age2">FETCH</label><br>  
+        <input type="radio" id="age3" name="age" value="100">
+        <label for="age3">JOIN</label><br><br>
+  
+  
+        <input type="submit" value="Submit">
+      <!-- </form> -->
+  </div>
+  </div>
+  
+
+<!-- Trigger/Open The Modal -->
+<!-- <button id="myBtn">Open Modal</button> -->
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="info-title"><span>Some Rules of this test</span></div>
+        <div class="info-list">
+            <div class="info">1. You will have only <span>1 minute</span> per each question.</div>
+            <div class="info">2. Once you select your answer, press continue.</div>
+            <div class="info">3. lalalalala.</div>
+            <div class="info">4. lalala.</div>
+            <div class="info">5. You'll get points on the basis of your correct answers.</div>
+        </div>
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+var form =document.getElementById("myForm");
+
+// Get the button that opens the modal
+// var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+// btn.onclick = function() {
+//   modal.style.display = "block";
+// }
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+  form.style.display = "block";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
